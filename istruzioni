@@ -1,0 +1,21 @@
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh 
+sudo usermod -aG docker giullo //solo in locale NON IN PRODUZIONE
+
+
+//copiato da docker machine (docs)
+base=https://github.com/docker/machine/releases/download/v0.16.0 &&
+curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+
+//copiato da docker compose (docs)
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+//installati GIT
+
+//clona il suo repo
+git clone https://github.com/BretFisher/udemy-docker-mastery.git
+
+//installati visual studio code e aggiungi le estensioni per docker (usa altri editor se vuoi..)
+
+
